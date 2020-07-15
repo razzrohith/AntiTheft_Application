@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.antimobile">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.PREVENT_POWER_KEY" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-feature android:name="android.hardware.camera"/>
+
+    <uses-feature
+        android:name="android.software.device_admin"
+        android:required="true"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity
+            android:name=".activity.SplashscreenActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.StartActivity" />
+
+        <activity android:name=".activity.StopActivity"/>
+
+        <receiver android:name=".services.ScreenReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.CLOSE_SYSTEM_DIALOGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".services.MyAdminReceiver"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/admin"/>
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
+            </intent-filter>
+        </receiver>
+
+
+        <receiver android:name=".Hardwares.WakeUpReceiver" android:exported="true" android:enabled="true">
+
+            <!--<intent-filter><action android:name="android.intent.action.ACTION_POWER_CONNECTED" /><action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" /></intent-filter>-->
+
+
+        </receiver>
+
+
+        <receiver android:name=".services.MyAdminReceiver" android:permission="android.permission.BIND_DEVICE_ADMIN">
+
+            <meta-data android:name="android.app.device_admin" android:resource="@xml/admin"/>
+
+
+            <intent-filter>
+
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
+
+            </intent-filter>
+
+        </receiver>
+
+        <!--<activity android:name=".SplashActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"><intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter></activity> -->
+        <service
+            android:name=".services.PowerButtonService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+
+        <activity android:name=".activity.SettingActivity" android:label="Settings"/>
+    </application>
+
+</manifest>

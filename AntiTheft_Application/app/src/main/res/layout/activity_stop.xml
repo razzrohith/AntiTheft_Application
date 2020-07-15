@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:layout_marginTop="100dp"
+    >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_button"
+        android:gravity="center"
+        android:text="STOP"
+        android:textColor="@color/white"
+        android:textSize="42dp"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AntiMobileTheft is activated !"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="50dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="45dp"
+        android:layout_marginRight="5dp"
+        android:text="NOTE: Relax your mobile in such a way that proximity detects the object."
+        android:layout_marginLeft="20dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:text="How to stop alarm ? "
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:text="# Unlocking the Phone will automatically stops the alarm.\n# By pressing the STOP button stops the alarm."
+
+        />
+
+
+</LinearLayout>

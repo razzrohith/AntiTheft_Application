@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:layout_width="136dp"
+        android:layout_height="145dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="70dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/appicon"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/phone_number"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:padding="10dp" />
+
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textviewshape"
+            android:gravity="center"
+            android:hint="@string/enter_phone_number"
+            android:inputType="phone"
+            android:maxEms="10"
+            android:paddingLeft="10dp"
+            tools:text="Phone number" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email :"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:padding="20dp"
+        />
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@null"
+            android:gravity="center"
+            android:hint="@string/enter_email"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="20dp"
+            tools:text="Email :"
+            android:paddingStart="20dp" />
+
+
+
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:background="@color/colorPrimary"
+            android:text="Next"
+            android:textColor="#fff" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="15dp"
+        android:text="Note : The details which you are providing are used for Tracking purpose so please enter your alternate number or any trusted number.  "
+        />
+    </LinearLayout>
+
+

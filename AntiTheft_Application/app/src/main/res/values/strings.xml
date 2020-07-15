@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MobileAntiTheft</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="action_settings_headers">Settings with Headers</string>
+    <string name="device_admin_explanation">Lock</string>
+    <string name="phone_number">Phone Number :</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="gps_settings_title">Gps Permission</string>
+    <string name="gps_settings_text">Get Gps Permission</string>
+    <string name="settings_button_ok">Ok</string>
+    <string name="settings_button_cancel">Cancel</string>
+    <string name="wake_up_timer">Time after which device wakes up (It\'s recommended to not to keep it large)</string>
+    <string name="sleep_timer">Time after which your devices locks after Timer has started.</string>
+    <string name="audio_vol">Volume at which device wakes up. (It\'s recommended to keep it <b>FULL</b>)</string>
+
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:weightSum="2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:scrollbars="vertical"
+        android:text="Welcome! \n\n You are about to use Mobile Anti Theft Assistance using Proximity Sensor \n\n Please read this END-User Licence Agreement carefully before clicking the ' Agree' button.\n\n By clicking 'Agree' you are agreeing to:\n\n 1.Terms of use and Privacy Policy of Mobile Anti Theft Assistance using Proximity Sensor. This user agreement is not meant to change anything in usage terms and conditions or privacy policy.It is actually meant to make it more helpful and convenient. \n\n 2.Anti Mobile Theft Assistance using Proximity Sensor uses a number of permissions to make its features functional.The  reason for the use of these permission are as follows:\na.LOCATION: This permission is required to get the location of the intruder who tries to steals your phone without your notice\nb.CAMERA: This Permission is necessary so that you can get the Selfie of the person who has been trying to steal your phone\nc.FILE STORAGE: This permission is nedded because  the Selfie of the intruder is saved in temporary files and when needed it is sent to your provided email address.\n\n3.it is to be noted that we do not save or use any user given information to spy on or use data to install any malicious software.\n\n4.This application doesn't contain any kind of virus or trojan horse to spy on you or anyone else\n\n5.Location data might not always be accurate as it depends on the GPS service provided in your device. "
+        android:textSize="14dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|end"
+        android:layout_gravity="bottom|end">
+
+        <Button
+            android:focusable="true"
+            android:clickable="true"
+            android:textStyle="bold"
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="650dp"
+            android:text="Agree"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
